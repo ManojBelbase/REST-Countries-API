@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Details</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="country.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="country.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-contain">
+        <h2 class="title"><a href="/">Where in the world?</a></h2>
+        <p class="theme-change">
+          <!-- <i class="fa-solid fa-sun"></i> -->
+          <i class="fa-regular fa-moon"></i>&nbsp;&nbsp;
+        </p>
+      </div>
+    </header>
+    <main>
+      <div class="countries-details-container">
+        <a href="#" class="back-button" onclick="history.back()"
+          ><i class="fa-solid fa-arrow-left"></i>&nbsp;&nbsp;Back</a
+        >
+        <div class="country-details">
+          <img src="https://flagcdn.com/is.svg" alt="lala" />
+
+          <div class="details-text-container">
+            <h2>Belgium</h2>
+            <div class="details-text">
+              <p><b>Native Name: </b><span class="native-name"></span></p>
+              <p><b>Population: </b> <span class="population"></span></p>
+              <p><b>Region: </b><span class="region"></span></p>
+              <p><b>Sub Region: </b><span class="sub-region"></span></p>
+              <p><b>Capital: </b><span class="capital-city"></span></p>
+              <p><b>Top Level Domain: </b><span class="domain"></span></p>
+              <p><b>Currenties: </b><span class="currency"></span></p>
+              <p><b>Launguage: </b><span class="launguage"></span></p>
+            </div>
+            <div class="border-countries">
+              <p>Border Countries:</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
