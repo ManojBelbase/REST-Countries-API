@@ -62,3 +62,6 @@ themeChange.addEventListener("click", () => {
     themeChange.innerHTML = '<i class="fa-solid fa-moon"></i>';
   }
 });
+
+// Loder
+$("#loader").addClass("hide-loader");
