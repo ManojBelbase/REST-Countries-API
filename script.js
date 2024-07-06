@@ -55,14 +55,28 @@ searchInput.addEventListener("input", (e) => {
 
 // dark mode
 themeChange.addEventListener("click", (e) => {
+  const body = document.querySelector("body");
   body.classList.toggle("dark");
   // checkTheme()
+  const theme = localStorage.getItem("theme");
+  console.log(localStorage.getItem("theme"));
+
+  const header = document.querySelector(".header");
 
   if (document.body.classList.contains("dark")) {
     checkTheme("dark");
+    body.style.backgroundColor = "hsl(207, 26%, 17%)";
+    body.style.color = "white";
+    header.style.backgroundColor = "hsl(207, 26%, 17%)";
+    header.style.color = "white";
+
     themeChange.innerHTML = '<i class="fa-solid fa-sun"></i>';
   } else {
     checkTheme("white");
+    body.style.backgroundColor = "white";
+    body.style.color = "black";
+    header.style.backgroundColor = "white";
+    header.style.color = "black";
     themeChange.innerHTML = '<i class="fa-solid fa-moon"></i>';
   }
 });
@@ -71,4 +85,22 @@ function checkTheme(color) {
   console.log(color);
   localStorage.setItem("theme", color);
 }
-// Loder
+
+window.addEventListener("load", (event) => {
+  localStorage.setItem("theme", "white");
+  const theme = localStorage.getItem("theme");
+  console.log(localStorage.getItem("theme"));
+  const body = document.querySelector("body");
+  const header = document.querySelector(".header");
+  if (theme == "dark") {
+    body.style.backgroundColor = "hsl(207, 26%, 17%)";
+    body.style.color = "white";
+    header.style.backgroundColor = "hsl(207, 26%, 17%)";
+    header.style.color = "white";
+  } else {
+    body.style.backgroundColor = "white";
+    body.style.color = "black";
+    header.style.backgroundColor = "white";
+    header.style.color = "black";
+  }
+});

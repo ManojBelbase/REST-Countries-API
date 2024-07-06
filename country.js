@@ -74,14 +74,23 @@ const moon = document.querySelector(".fa-moon");
 const sun = document.querySelector(".fa-sun");
 const themeChange = document.querySelector(".theme-change");
 const body = document.querySelector("body");
+const header = document.querySelector(".header");
 // dark theme
 themeChange.addEventListener("click", () => {
   body.classList.toggle("dark");
   if (document.body.classList.contains("dark")) {
     checkTheme("dark");
+    body.style.backgroundColor = "hsl(207, 26%, 17%)";
+    body.style.color = "white";
+    header.style.backgroundColor = "hsl(207, 26%, 17%)";
+    header.style.color = "white";
     themeChange.innerHTML = '<i class="fa-solid fa-sun"></i>';
   } else {
     checkTheme("white");
+    body.style.backgroundColor = "white";
+    body.style.color = "black";
+    header.style.backgroundColor = "white";
+    header.style.color = "black";
     themeChange.innerHTML = '<i class="fa-solid fa-moon"></i>';
   }
 });
@@ -96,6 +105,7 @@ window.addEventListener("load", (event) => {
   console.log(localStorage.getItem("theme"));
   const body = document.querySelector("body");
   const header = document.querySelector(".header");
+  body.classList.toggle("dark");
   if (theme == "dark") {
     body.style.backgroundColor = "hsl(207, 26%, 17%)";
     body.style.color = "white";

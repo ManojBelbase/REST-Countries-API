@@ -4,24 +4,20 @@
   box-sizing: border-box;
 }
 body {
-  --background-color: white;
+  /* --background-color: white;
   --text-color: black;
-  --elements-color: white;
+  --elements-color: white; */
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
   overflow-y: scroll;
   /* background-color: aliceblue; */
-  /* background-color: var(--background-color); */
-  color: var(--text-color);
+  /* background-color: var(--background-color);
+  color: var(--text-color); */
 }
 body.dark {
-  --background-color: hsl(207, 26%, 17%);
+  /* --background-color: hsl(207, 26%, 17%);
   --text-color: white;
-  --elements-color: hsl(209, 23%, 22%);
-}
- 
-main{
-  margin: 0px 40px;
+  --elements-color: hsl(209, 23%, 22%); */
 }
 .title {
   font-weight: 800;
@@ -48,8 +44,9 @@ main{
 
 .countries-container {
   /* margin-inline: auto; */
-  /* margin: 0px 50px; */
+  margin: 0px 50px;
   margin-top: 5em;
+ 
   display: grid;
   gap: 5rem;
   grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
@@ -57,6 +54,13 @@ main{
  
   flex-wrap: wrap;
 }
+
+
+
+
+
+
+
 a {
   text-decoration-line: none;
   color: inherit;
@@ -106,7 +110,6 @@ a {
   display: flex;
   align-items: center;
   padding-left: 24px;
-  /* background-color: red; */
   color: #999;
   background-color: var(--elements-color);
 }
@@ -136,7 +139,7 @@ a {
 @media (max-width: 560px) {
   .countries-container {
     justify-content: center;
-    /* margin: 0px 40px; */
+    margin: 0px 40px;
   }
   .title {
     font-size: 16px;
