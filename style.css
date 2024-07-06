@@ -2,11 +2,14 @@
 
 * {
   box-sizing: border-box;
+ 
 }
+
 body {
   /* --background-color: white;
   --text-color: black;
   --elements-color: white; */
+ 
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
   overflow-y: scroll;
@@ -25,7 +28,8 @@ body.dark {
 .header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   padding-inline: 24px;
-  background-color: var(--elements-color);
+  /* background-color: var(--elements-color);
+  /* border-bottom: 0.1px solid white; */
 }
 .header-contain {
   display: flex;
@@ -67,7 +71,7 @@ a {
 }
 .country-card {
   display: inline-block;
- 
+   border: 1px solid white;
   border-radius: 4px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -129,11 +133,17 @@ a {
   width: 250px;
   padding: 16px;
   outline: none;
-  border: none;
+  border: 1px solid whitesmoke;
   border-radius: 4px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
   background-color: var(--elements-color);
   color: var(--text-color);
+}
+option{
+  color: var(--text-color);
+  background-color: var(--elements-color);
+  background-color: white;
+  color: black;
 }
 
 @media (max-width: 560px) {

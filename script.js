@@ -1,11 +1,10 @@
 const filterByRegion = document.querySelector(".filter-by-region");
 const countriesContainer = document.querySelector(".countries-container");
 const searchInput = document.querySelector(".search-container input");
-const themeChange = document.querySelector(".theme-change");
-const body = document.querySelector("body");
+// const themeChange = document.querySelector(".theme-change");
+// const body = document.querySelector("body");
 const moon = document.querySelector(".fa-moon");
 const sun = document.querySelector(".fa-sun");
-
 let allCountriesData;
 fetch("https://restcountries.com/v3.1/all")
   .then((res) => res.json())
@@ -52,16 +51,13 @@ searchInput.addEventListener("input", (e) => {
   renderCountries(filterCountries);
   console.log(filterCountries);
 });
-
+const themeChange = document.querySelector(".theme-change");
+const body = document.querySelector("body");
+const header = document.querySelector(".header");
 // dark mode
 themeChange.addEventListener("click", (e) => {
-  const body = document.querySelector("body");
+  // const body = document.querySelector("body");
   body.classList.toggle("dark");
-  // checkTheme()
-  const theme = localStorage.getItem("theme");
-  console.log(localStorage.getItem("theme"));
-
-  const header = document.querySelector(".header");
 
   if (document.body.classList.contains("dark")) {
     checkTheme("dark");
@@ -87,11 +83,15 @@ function checkTheme(color) {
 }
 
 window.addEventListener("load", (event) => {
-  localStorage.setItem("theme", "white");
+  // localStorage.setItem("theme", "white");
+  console.log("hello");
   const theme = localStorage.getItem("theme");
-  console.log(localStorage.getItem("theme"));
   const body = document.querySelector("body");
+  // console.log(body.classList.toggle("dark"));
+  // console.log(localStorage.getItem("theme"));
   const header = document.querySelector(".header");
+  // console.log(body.classList.toggle("dark"));
+  body.classList.toggle("dark");
   if (theme == "dark") {
     body.style.backgroundColor = "hsl(207, 26%, 17%)";
     body.style.color = "white";

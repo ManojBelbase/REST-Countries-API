@@ -101,11 +101,13 @@ function checkTheme(color) {
 }
 
 window.addEventListener("load", (event) => {
+  console.log("fff");
   const theme = localStorage.getItem("theme");
   console.log(localStorage.getItem("theme"));
   const body = document.querySelector("body");
   const header = document.querySelector(".header");
   body.classList.toggle("dark");
+
   if (theme == "dark") {
     body.style.backgroundColor = "hsl(207, 26%, 17%)";
     body.style.color = "white";

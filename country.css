@@ -9,11 +9,14 @@ body.dark {
 }
 .header {
   /* background-color: var(--elements-color); */
-  background-color: red;
+  /* background-color: red; */
+}
+main {
+  margin: 0px 40px;
 }
 .back-button {
-  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
-  padding: 6px 24px;
+  box-shadow: 1px 4px 16px 4px rgba(0, 0, 0, 0.2);
+  padding: 5px 9px;
   border-radius: 4px;
   background-color: var(--elements-color);
 }
